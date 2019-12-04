@@ -1,0 +1,100 @@
+body{
+    margin:0;
+    padding:0;
+    background:rgb(22, 22, 22);
+}
+.loading{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:100px;
+    height:100px;
+    margin-left:-50px; 
+    margin-top:-50px;
+    
+    /* border:solid rgb(172, 167, 167); */
+    display:flex;
+   
+}
+.loading div{
+    
+    margin:5px; 
+    height:100px;
+    width:.6em;
+    background:rgb(238, 235, 235);
+    border-radius: 100px;
+    justify-items:center;
+    position:relative;
+    
+}
+.loading .first,.fifth{
+    animation: updown15 1s infinite ease-in;
+    /* height:20px;
+    top:35%; */
+    
+}
+.loading .second,.fourth{
+    animation: updown24 1s infinite ease;
+    /* height:40px;
+    top:25%; */
+}
+.loading .third{
+    animation: updown3 1s infinite ease-in-out;
+    
+}
+h3{
+    color:white;
+    background: red;
+    cursor:pointer;
+    display:block;
+    width:auto;
+}
+.active{
+    background:rgb(238, 235, 235);
+}
+.active .loading div{
+    background:rgb(22, 22, 22);
+}
+
+@keyframes updown3{
+    0%{
+        top:0%;
+        height:100px;
+    }
+    50%{
+        top:35%;
+        height:20px;
+    }
+    100%{
+        top:0%;
+        height:100px;
+    }
+}
+@keyframes updown24{
+    0%{
+        height:40px;
+        top:25%;
+    }
+    50%{
+        top:0%;
+        height:100px;
+    }
+    100%{
+        height:40px;
+        top:25%;
+    }
+}
+@keyframes updown15{
+    0%{
+        height:20px;
+        top:35%;
+    }
+    50%{
+        top:0%;
+        height:100px;
+    }
+    100%{
+        height:20px;
+        top:35%;
+    }
+}
